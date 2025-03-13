@@ -1,7 +1,7 @@
 /*
 Jade Walters
 CSCI 2251
-Assignment: Human Resources
+Assignment: Human Resources/Tree Data Structure
 Purpose: to practice creating classes and using inheritence
 Sources: --I referenced some of my past assignments such as 
 HurricaneRowData and TicTacToe
