@@ -62,12 +62,13 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	//TODO check for duplicates!!!!!!!!!!!!!
 	public void add(Person p) {
 		
-		//check if duplicate
+		//if current tree has no person, set person
+		if(!hasPerson) {
+			this.person = p;
+		}
 		
-			//if current tree has no person, set person
-			if(!hasPerson) {
-				this.person = p;
-			}
+		//check if duplicate
+		else if(!isDuplicate(p)) {
 			
 			//if current tree has person
 			//and person is alphabetically before
@@ -76,12 +77,61 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 			////if current tree has person
 			//and person is alphabetically after/same
 			//set right branch
+			
+		}
+	}
+	
+	//TODO check for duplicate method?????????????
+	//method checks to see if person is 
+	public boolean isDuplicate(person p) {
 		
+		//return false is person is null
+		if(!hasPerson) {
+			return false;
+		}
+		
+		//compare person attributes, return true if all match
+		else if(this.getName().equalsIgnoreCase(p.getName()) {
+			if(this.getHeight() == p.getHeight() {
+				if(this.getWeight() == p.getWeight() {
+					return true;
+				}
+			}
+		}
+		return false;  //not same attributes
+	}
+	
+	public boolean contains(int value)
+	{
+		//If the current node has no value, return false.
+		if(!hasValue)
+		{
+			return false;
+		}
+		//Does this have the value
+		else if(this.value == value)
+		{
+			return true;
+		}
+		//Otherwise, if value is less than the current node's value, check the tree to the left.
+		else if(value < this.value)
+		{
+			if(leftChild == null)
+				return false;
+			return leftChild.contains(value);
+		}
+		//If the value is greater than or equal to the current node's value, check the tree to the right.
+		else
+		{
+			if(rightChild == null)
+				return false;
+			return rightChild.contains(value);
+		}
 	}
 	
 	//TODO toString method
 	
-	//TODO check for duplicate method?????????????
+	
 
 	
 
