@@ -58,8 +58,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		return rightBranch;
 	}
 
-	//TODO sets person data
-	//TODO check for duplicates!!!!!!!!!!!!!
+	//adds new person to tree in alphabetical order
 	public void add(Person p) {
 		
 		//if current tree has no person, set person
@@ -70,19 +69,35 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		//check if duplicate
 		else if(!isDuplicate(p)) {
 			
-			//if current tree has person
-			//and person is alphabetically before
-			//current, set left branch
+			//if p is alphabetically before person, set p to left branch
+			if(p.getName().compareToIgnoreCase(person.getName()) > 0) { //not sure if this inequality is going the right way
+				
+				//if leftBranch is null, create it
+				if(leftBranch == null) {
+					leftBranch = new SortedTreeSet();
+					leftBranch.root = this;
+				}
+				
+				//else call add on leftBranch
+				leftBranch.add(p);
+			}
 			
-			////if current tree has person
-			//and person is alphabetically after/same
-			//set right branch
-			
+			//if p is alphabetically after or equal to person, set p to right branch
+			else if(p.getName().compareToIgnoreCase(person.getName()) <= 0) {//not sure in inequality is pointing right way
+				
+				//if rightBranch is null, create it
+				if(rightBranch == null) {
+					rightBranch = new SortedTreeSet();
+					rightBranch.root = this;
+				}
+				
+				//else call add on rightBranch
+				rightBranch.add(p);
+			}
 		}
 	}
-	
-	//TODO check for duplicate method?????????????
-	//method checks to see if person is 
+
+	//checks if duplicate person
 	public boolean isDuplicate(Person p) {
 		
 		//return false is person is null
