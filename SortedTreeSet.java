@@ -17,9 +17,9 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		this.person = null;
 	}
 	
-	//TODO
+	//returns person data
 	public Person getPerson() {
-		
+		return person;
 	}
 	
 	//returns true if has a left branch
@@ -52,8 +52,9 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		return rightBranch;
 	}
 
-	//TODO
+	//sets person data
 	public void add(Person p) {
+		
 	}
 	
 
