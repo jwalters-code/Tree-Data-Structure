@@ -53,35 +53,7 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		
-		/*
-		//test code, instantiate a test Person object
-		Person testPerson = new Person("Fabio", 191, 63);
-		
-		//test code, check if duplicates are excluded
-		Person testPerson2 = new Person("Fabio", 191, 63);
-		Person testPerson3 = new Person("notFabio", 191, 63);
-		
-		//test code, print testPerson
-		System.out.println(testPerson);
-		
-		//instantiate a test PersonSet object
-		PersonSet testPersonSet = new PersonSet();
-		
-		//test code, add test persons and print
-		testPersonSet.add(testPerson);
-		testPersonSet.add(testPerson2); //duplicate, shouldn't add
-		testPersonSet.add(testPerson3);
-		
-		System.out.println(testPersonSet.get(0));
-		System.out.println(testPersonSet.get(1));
-		
-		System.out.println(); //blank line for readability
-		
-		//test code, check PersonSet toString method
-		System.out.println(testPersonSet.toString());
-		*/
-		
+	
 		//personSet options
 		//instantiate a PersonOrderedSet
 		//PersonOrderedSet orderedSet = new PersonOrderedSet();
@@ -144,10 +116,9 @@ public class Main
 		//System.out.println(orderedSet.toString());
 		
 		//SortedTreeSet option
-		//print SortedTreeSet
+		//print SortedTreeSet, add header
+		String headerString = String.format
+			("%-10s %10s %10s\n", "Name", "Height(cm)", "Weight(kg)");
 		System.out.println(sortedTree.toString());
-		
-		
-		
 	}
 }

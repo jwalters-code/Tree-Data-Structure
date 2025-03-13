@@ -116,22 +116,22 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		return false;  //not same attributes
 	}
 	
-	//TODO toString method
+	//toString method
 	@Override 
 	public String toString() {
 		
 		//create sorted tree String
 		String treeString = "";
 		
-		//if leftBranch has person, concat
+		//move down left branch
 		if(hasLeft()) {
 			treeString += leftBranch.toString();
 		}
 		
-		//get this person, concat
+		//concat current person
 		treeString += person + "\n";
 		
-		//get rightBranch, concat
+		//move down right branch
 		if(hasRight()) {
 			treeString += rightBranch.toString();
 		}
