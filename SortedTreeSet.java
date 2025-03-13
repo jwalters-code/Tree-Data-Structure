@@ -22,28 +22,34 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		
 	}
 	
-	//TODO
+	//returns true if has a left branch
 	public boolean hasLeft() {
+		return leftBranch != null;
 	}
 	
-	//TODO
+	//sets leftBranch
 	public void setLeft(SortedTreeSet left) {
+		this.leftBranch = left;
 	}
 	
-	//TODO
+	//returns leftBranch
 	public SortedTreeSet getLeft() {
+		return leftBranch;
 	}
 
-	//TODO
+	//returns true if has a right branch
 	public boolean hasRight() {
+		return rightBranch != null;
 	}
 	
-	//TODO
+	//sets rightBranch
 	public void setRight(SortedTreeSet right) {
+		this.rightBranch = right;
 	}
 	
-	//TODO
+	//returns rightBranch
 	public SortedTreeSet getRight() {
+		return rightBranch;
 	}
 
 	//TODO
