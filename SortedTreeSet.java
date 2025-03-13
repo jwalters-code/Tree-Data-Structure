@@ -117,9 +117,24 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	}
 	
 	//TODO toString method
-	
-	
-
-	
-
+	@Override 
+	public String toString() {
+		
+		//create sorted tree String
+		String treeString = "";
+		
+		//if leftBranch has person, concat
+		if(hasLeft()) {
+			treeString += leftBranch.toString();
+		}
+		
+		//get person
+		treeString += person + " ";
+		
+		//get rightBranch
+		if(hasRight()) {
+			treeString += rightBranch.toString();
+		}
+		return treeString;
+	}
 }

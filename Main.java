@@ -88,9 +88,8 @@ public class Main
 		
 		//TODO SortedTreeSet option
 		//instantiate a SortedTreeSet
-		
-		
-		
+		SortedTreeSet orderedTree = new SortedTreeSet();
+	
 		try {
 			
 			//read in from file
@@ -116,6 +115,7 @@ public class Main
 				//orderedSet.add(tempPersonO);
 				
 				//TODO SortedTreeSet Option
+				//add tempPerson to Sorted Tree
 				
 				
 			}
