@@ -63,7 +63,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	public void add(Person p) {
 		
 		//if current tree has no person, set person
-		if(!hasPerson) {
+		if(!hasPerson()) {
 			this.person = p;
 		}
 		
@@ -86,47 +86,19 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	public boolean isDuplicate(Person p) {
 		
 		//return false is person is null
-		if(!hasPerson) {
+		if(!hasPerson()) {
 			return false;
 		}
 		
 		//compare person attributes, return true if all match
-		else if(this.getName().equalsIgnoreCase(p.getName())) {
-			if(this.getHeight() == p.getHeight()) {
-				if(this.getWeight() == p.getWeight()) {
+		else if(person.getName().equalsIgnoreCase(p.getName())) {
+			if(person.getHeight() == p.getHeight()) {
+				if(person.getWeight() == p.getWeight()) {
 					return true;
 				}
 			}
 		}
 		return false;  //not same attributes
-	}
-	
-	public boolean contains(int value)
-	{
-		//If the current node has no value, return false.
-		if(!hasValue)
-		{
-			return false;
-		}
-		//Does this have the value
-		else if(this.value == value)
-		{
-			return true;
-		}
-		//Otherwise, if value is less than the current node's value, check the tree to the left.
-		else if(value < this.value)
-		{
-			if(leftChild == null)
-				return false;
-			return leftChild.contains(value);
-		}
-		//If the value is greater than or equal to the current node's value, check the tree to the right.
-		else
-		{
-			if(rightChild == null)
-				return false;
-			return rightChild.contains(value);
-		}
 	}
 	
 	//TODO toString method
