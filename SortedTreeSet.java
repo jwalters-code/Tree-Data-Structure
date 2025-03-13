@@ -128,10 +128,10 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 			treeString += leftBranch.toString();
 		}
 		
-		//get person
+		//get this person, concat
 		treeString += person + " ";
 		
-		//get rightBranch
+		//get rightBranch, concat
 		if(hasRight()) {
 			treeString += rightBranch.toString();
 		}

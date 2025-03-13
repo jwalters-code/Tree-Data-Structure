@@ -86,9 +86,9 @@ public class Main
 		//instantiate a PersonOrderedSet
 		//PersonOrderedSet orderedSet = new PersonOrderedSet();
 		
-		//TODO SortedTreeSet option
+		//sortedTreeSet option
 		//instantiate a SortedTreeSet
-		SortedTreeSet orderedTree = new SortedTreeSet();
+		SortedTreeSet sortedTree = new SortedTreeSet();
 	
 		try {
 			
@@ -109,15 +109,13 @@ public class Main
 				//create a tempPerson objects
 				Person tempPerson = new Person(name, height, weight);
 				
-				
 				//PersonOrderedSet option
 				//add tempPerson to orderedSet
-				//orderedSet.add(tempPersonO);
+				//orderedSet.add(tempPerson);
 				
-				//TODO SortedTreeSet Option
+				//SortedTreeSet Option
 				//add tempPerson to Sorted Tree
-				
-				
+				sortedTree.add(tempPerson);
 			}
 			
 		}
@@ -126,12 +124,12 @@ public class Main
 			System.exit(1);
 		}
 	
-		//write orderedSet to file
+		//write set to file
 		try
 		{	
 			FileWriter fileWriterOrder = new FileWriter
 				("hr_ordered_set_output.txt");
-			//TODO fileWriterOrder.write(personTree.toString());
+			fileWriterOrder.write(sortedTree.toString());
 			fileWriterOrder.close(); //close fileWriter
 		}
 		catch(IOException e)
@@ -141,32 +139,13 @@ public class Main
 			System.exit(1);
 		}
 		
-		/*
-		//write imperialSet to file
-		try
-		{	
-			FileWriter fileWriterImperial = new FileWriter
-				("hr_imperial_set_output.txt");
-			fileWriterImperial.write(imperialSet.toString());
-			fileWriterImperial.close(); //close fileWriter
-		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-			System.out.println(e);
-			System.exit(2);
-		}*/
-		
 		//personSet option
 		//print orderedSet
 		//System.out.println(orderedSet.toString());
 		
-		//print imperialSet
-		//System.out.println(imperialSet.toString());
-		
-		//TODO SortedTreeSet option
+		//SortedTreeSet option
 		//print SortedTreeSet
-		//System.out.println(personTree.toString());
+		System.out.println(sortedTree.toString());
 		
 		
 		
