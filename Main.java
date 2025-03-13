@@ -131,7 +131,7 @@ public class Main
 		{	
 			FileWriter fileWriterOrder = new FileWriter
 				("hr_ordered_set_output.txt");
-			//fileWriterOrder.write(personTree.toString());
+			//TODO fileWriterOrder.write(personTree.toString());
 			fileWriterOrder.close(); //close fileWriter
 		}
 		catch(IOException e)

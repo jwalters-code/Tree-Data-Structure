@@ -5,7 +5,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	private SortedTreeSet root;
 	private SortedTreeSet leftBranch;
 	private SortedTreeSet rightBranch;
-	private boolean hasPerson;  //has person data
+	//private boolean hasPerson;  //has person data  //TODO DELETE IF METHOD VERSION WORKS
 	private Person person; //takes person object
 	
 	//default constructor
@@ -13,13 +13,19 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		this.root = null;
 		this.leftBranch = null;
 		this.rightBranch = null;
-		this.hasPerson = false;
+		//this.hasPerson = false;  //TODO DELETE IF METHOD VERSION WORKS
 		this.person = null;
 	}
 	
 	//returns person data
 	public Person getPerson() {
 		return person;
+	}
+	
+	//IS THIS BETTER??? DOES IT WORK???
+	//returns true if person data is not null
+	public boolean hasPerson() {
+		return person != null;
 	}
 	
 	//returns true if has a left branch
@@ -52,10 +58,27 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		return rightBranch;
 	}
 
-	//sets person data
+	//TODO sets person data
+	//TODO check for duplicates!!!!!!!!!!!!!
 	public void add(Person p) {
 		
+		//if current tree has no person, set person
+		if(!hasPerson) {
+			this.person = p;
+		}
+		
+		//if current tree has person
+		//and person is alphabetically before
+		//current, set left branch
+		
+		////if current tree has person
+		//and person is alphabetically after/same
+		//set right branch
+		
 	}
+	
+	//TODO toString method
+
 	
 
 }
