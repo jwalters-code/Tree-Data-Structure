@@ -20,28 +20,6 @@ source: https://www.wikihow.com/Convert-Kilograms-to-Pounds
 source: https://www.geeksforgeeks.org/sorting-strings-using-bubble-sort-2/
 */
 
-/*
-Q1: Car and Engine are related
-by which, Inheritance or Composition?
-Composition
-
-Q2: Color and Red are related
-by which, Inheritance or Composition?
-Inheritance
-
-Q3: Shirt and Clothing are related
-by which, Inheritance or Composition?
-Inheritance
-
-Q4: Furniture and Desk are related
-by which, Inheritance or Composition?
-Inheritance
-
-Q5: CellPhone and Battery are related
-by which, Inheritance or Composition?
-Composition
-*/
-
 /*Your task is to create a self-sorting, binary tree set that can be used in place of the PersonOrderedSet used in the Nintendo Human Resources assignment.
 
 If implemented correctly, minimal changes to Main.java will be needed to your Human Resources code.
@@ -104,9 +82,14 @@ public class Main
 		System.out.println(testPersonSet.toString());
 		*/
 		
-		//instantiate a PersonOrderedSet and a PersonImperialSet
-		PersonOrderedSet orderedSet = new PersonOrderedSet();
-		//PersonImperialSet imperialSet = new PersonImperialSet();
+		//personSet options
+		//instantiate a PersonOrderedSet
+		//PersonOrderedSet orderedSet = new PersonOrderedSet();
+		
+		//TODO SortedTreeSet option
+		//instantiate a SortedTreeSet
+		
+		
 		
 		try {
 			
@@ -125,14 +108,16 @@ public class Main
 				double weight = fileReader.nextDouble();
 				
 				//create a tempPerson objects
-				Person tempPersonO = new Person(name, height, weight);
-				//Person tempPersonI = new Person(name, height, weight);
+				Person tempPerson = new Person(name, height, weight);
 				
+				
+				//PersonOrderedSet option
 				//add tempPerson to orderedSet
-				orderedSet.add(tempPersonO);
+				//orderedSet.add(tempPersonO);
 				
-				//add tempPerson to PersonImperialSet
-				//imperialSet.add(tempPersonI);
+				//TODO SortedTreeSet Option
+				
+				
 			}
 			
 		}
@@ -146,7 +131,7 @@ public class Main
 		{	
 			FileWriter fileWriterOrder = new FileWriter
 				("hr_ordered_set_output.txt");
-			fileWriterOrder.write(orderedSet.toString());
+			//fileWriterOrder.write(personTree.toString());
 			fileWriterOrder.close(); //close fileWriter
 		}
 		catch(IOException e)
@@ -172,10 +157,18 @@ public class Main
 			System.exit(2);
 		}*/
 		
+		//personSet option
 		//print orderedSet
-		System.out.println(orderedSet.toString());
+		//System.out.println(orderedSet.toString());
 		
 		//print imperialSet
 		//System.out.println(imperialSet.toString());
+		
+		//TODO SortedTreeSet option
+		//print SortedTreeSet
+		//System.out.println(personTree.toString());
+		
+		
+		
 	}
 }

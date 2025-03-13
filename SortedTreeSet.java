@@ -2,15 +2,15 @@
 public class SortedTreeSet implements SortedTreeSetInterface {
 	
 	//instance variables
-	private Tree root;
-	private Tree leftBranch;
-	private Tree rightBranch;
+	private SortedTreeSet root;
+	private SortedTreeSet leftBranch;
+	private SortedTreeSet rightBranch;
 	private boolean hasPerson;  //has person data
 	private Person person; //takes person object
 	
 	//default constructor
 	public SortedTreeSet() {
-		this.root = null
+		this.root = null;
 		this.leftBranch = null;
 		this.rightBranch = null;
 		this.hasPerson = false;
