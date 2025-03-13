@@ -62,22 +62,26 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	//TODO check for duplicates!!!!!!!!!!!!!
 	public void add(Person p) {
 		
-		//if current tree has no person, set person
-		if(!hasPerson) {
-			this.person = p;
-		}
+		//check if duplicate
 		
-		//if current tree has person
-		//and person is alphabetically before
-		//current, set left branch
-		
-		////if current tree has person
-		//and person is alphabetically after/same
-		//set right branch
+			//if current tree has no person, set person
+			if(!hasPerson) {
+				this.person = p;
+			}
+			
+			//if current tree has person
+			//and person is alphabetically before
+			//current, set left branch
+			
+			////if current tree has person
+			//and person is alphabetically after/same
+			//set right branch
 		
 	}
 	
 	//TODO toString method
+	
+	//TODO check for duplicate method?????????????
 
 	
 
