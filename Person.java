@@ -67,7 +67,7 @@ public class Person {
 	//toSring method returns Person data in database-ready format
 	@Override
 	public String toString() {
-		String personData = String.format("%s %.0f %.0f", name, height, weight);
+		String personData = String.format("%-10s %10.0f %10.0f", name, height, weight);
 		return personData;
 	}
 }

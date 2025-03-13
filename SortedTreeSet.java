@@ -70,7 +70,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		else if(!isDuplicate(p)) {
 			
 			//if p is alphabetically before person, set p to left branch
-			if(p.getName().compareToIgnoreCase(person.getName()) > 0) { //not sure if this inequality is going the right way
+			if(p.getName().compareToIgnoreCase(person.getName()) < 0) { 
 				
 				//if leftBranch is null, create it
 				if(leftBranch == null) {
@@ -83,7 +83,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 			}
 			
 			//if p is alphabetically after or equal to person, set p to right branch
-			else if(p.getName().compareToIgnoreCase(person.getName()) <= 0) {//not sure in inequality is pointing right way
+			else if(p.getName().compareToIgnoreCase(person.getName()) >= 0) {
 				
 				//if rightBranch is null, create it
 				if(rightBranch == null) {
@@ -129,7 +129,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		}
 		
 		//get this person, concat
-		treeString += person + " ";
+		treeString += person + "\n";
 		
 		//get rightBranch, concat
 		if(hasRight()) {
