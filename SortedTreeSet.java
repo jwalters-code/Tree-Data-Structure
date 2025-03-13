@@ -8,14 +8,18 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	private boolean hasPerson;  //has person data
 	private Person person; //takes person object
 	
-	//constructor
+	//default constructor
 	public SortedTreeSet() {
-		
-		
+		this.root = null
+		this.leftBranch = null;
+		this.rightBranch = null;
+		this.hasPerson = false;
+		this.person = null;
 	}
 	
 	//TODO
 	public Person getPerson() {
+		
 	}
 	
 	//TODO
