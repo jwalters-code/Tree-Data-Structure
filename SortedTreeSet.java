@@ -83,7 +83,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	
 	//TODO check for duplicate method?????????????
 	//method checks to see if person is 
-	public boolean isDuplicate(person p) {
+	public boolean isDuplicate(Person p) {
 		
 		//return false is person is null
 		if(!hasPerson) {
@@ -91,9 +91,9 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		}
 		
 		//compare person attributes, return true if all match
-		else if(this.getName().equalsIgnoreCase(p.getName()) {
-			if(this.getHeight() == p.getHeight() {
-				if(this.getWeight() == p.getWeight() {
+		else if(this.getName().equalsIgnoreCase(p.getName())) {
+			if(this.getHeight() == p.getHeight()) {
+				if(this.getWeight() == p.getWeight()) {
 					return true;
 				}
 			}
