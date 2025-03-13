@@ -1,3 +1,10 @@
+/*
+Jade Walters
+CSCI 2251
+Assignment: Tree Data Structure
+Purpose: to use a binary tree for sorting data
+Sources: class materials
+*/
 
 public class SortedTreeSet implements SortedTreeSetInterface {
 	
@@ -5,7 +12,6 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	private SortedTreeSet root;
 	private SortedTreeSet leftBranch;
 	private SortedTreeSet rightBranch;
-	//private boolean hasPerson;  //has person data  //TODO DELETE IF METHOD VERSION WORKS
 	private Person person; //takes person object
 	
 	//default constructor
@@ -13,7 +19,6 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		this.root = null;
 		this.leftBranch = null;
 		this.rightBranch = null;
-		//this.hasPerson = false;  //TODO DELETE IF METHOD VERSION WORKS
 		this.person = null;
 	}
 	
@@ -22,7 +27,6 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 		return person;
 	}
 	
-	//IS THIS BETTER??? DOES IT WORK???
 	//returns true if person data is not null
 	public boolean hasPerson() {
 		return person != null;

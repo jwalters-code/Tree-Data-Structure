@@ -1,3 +1,10 @@
+/*
+Jade Walters
+CSCI 2251
+Assignment: Tree Data Structure
+Purpose: to use a binary tree for sorting data
+Sources: class materials
+*/
 
 public interface SortedTreeSetInterface //Binary Tree
 {
