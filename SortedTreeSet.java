@@ -66,6 +66,13 @@ public class SortedTreeSet implements SortedTreeSetInterface {
 	public void add(Person p) {
 		
 		//if current tree has no person, set person
+		//check if duplicate
+		//if p is alphabetically before person, set p to left branch
+		//if leftBranch is null, create it, else call add on leftBranch
+		//if p is alphabetically after/same as person, set p to right branch
+		//if rightBranch is null, create it, else call add on rightBranch
+		
+		//if current tree has no person, set person
 		if(!hasPerson()) {
 			this.person = p;
 		}
